@@ -30,4 +30,8 @@ public class Calculadora {
 		resultado=(valor1+valor2+valor3)/3;
 		return resultado;
 	}
+	
+	public void mostrarResultado() {
+		System.out.println("Ahora no joven, Sali al almuerzo. Regreso en unos 15 minutos");
+	}
 }

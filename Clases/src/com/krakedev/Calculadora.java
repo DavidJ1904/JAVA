@@ -13,10 +13,15 @@ public class Calculadora {
 		return resultado;
 	}
 	
-	public int multiplicar(int valor1,int valor2) {
-		int resultado;
+	public double multiplicar(int valor1,int valor2) {
+		double resultado;
 		resultado=valor1*valor2;
 		return resultado;
 	}
 	
+	public double dividir(int valor1,int valor2) {
+		double resultado;
+		resultado=valor1/valor2;
+		return resultado;
+	}
 }

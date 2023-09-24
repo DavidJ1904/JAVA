@@ -6,8 +6,8 @@ public class TestCalculadora {
 		// TODO Auto-generated method stub
 		Calculadora calcu;
 		Calculadora m;
-		int resultadoSuma;
-		int resultadoResta;
+		double resultadoSuma;
+		double resultadoResta;
 		double resultadoMultiplicar;
 		double resultadoDividir;
 		double resultadoPromediar;

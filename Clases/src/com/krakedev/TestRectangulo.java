@@ -6,20 +6,20 @@ public class TestRectangulo {
 		Rectangulo r1 = new Rectangulo();
 		Rectangulo r2 = new Rectangulo();
 		
-		int areaR1;
-		int areaR2;
+		double areaR1;
+		double areaR2;
 		double peri1;
 		double peri2;
 		
-		r1.base=10;
-		r1.altura=5;
-		r1.base1=3;
-		r1.altura1=9;
+		r1.setBase(10);
+		r1.setAltura(5);
+		r1.setBase1(3);
+		r1.setAltura1(9);
 		
-		r2.base=8;
-		r2.altura=5;
-		r2.base1=4;
-		r2.altura1=7;
+		r2.setBase(8);
+		r2.setAltura(5);
+		r2.setBase1(4);
+		r2.setAltura1(7);
 		
 		areaR1=r1.calcularArea();
 		areaR2=r2.calcularArea();

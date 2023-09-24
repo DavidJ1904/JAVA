@@ -4,9 +4,15 @@ public class TestProducto {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Producto proA = new Producto();
-		Producto proB = new Producto();
-		Producto proC = new Producto();
+		Producto proA = new Producto("Es un producto de limpieza y humectacion de las manos");
+		Producto proB = new Producto("Es un producto de limpieza bucal");
+		Producto proC = new Producto("Es un producto analgesico que bloquea la generacion de dolor");
+		Producto proD = new Producto("Es un producto de limpieza facial");
+		Producto proE = new Producto("Ayuda a mejorar la circulacion de la sangre");
+		
+		System.out.println(proD.getDescripcion());
+		System.out.println(proE.getDescripcion());
+		System.out.println("-------------------------");
 		// Accdedo a los atributos proA
 		System.out.println("nombre:" + proA.getNombre());
 		System.out.println("descripcion:" + proA.getDescripcion());

@@ -4,8 +4,14 @@ public class TestAuto {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Auto auto1 = new Auto();
-		Auto auto2 = new Auto();
+		Auto auto1 = new Auto("Mercedez");
+		Auto auto2 = new Auto("Mazda");
+		Auto auto3 = new Auto("Chevrolet");
+		Auto auto4 = new Auto("Hundai");
+		
+		System.out.println(auto3.getMarca());
+		System.out.println(auto4.getMarca());
+		
 		//Auto1
 		System.out.println("marca:"+auto1.getMarca());
 		System.out.println("anio:"+auto1.getAnio());

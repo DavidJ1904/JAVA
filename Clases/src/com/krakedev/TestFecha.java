@@ -3,7 +3,12 @@ package com.krakedev;
 public class TestFecha {
 
 	public static void main(String[] args) {
-		Fecha fecha1 =new Fecha();
+		Fecha fecha1 =new Fecha(01);
+		Fecha fecha2 = new Fecha(10);
+		Fecha fecha3 = new Fecha(04);
+		
+		System.out.println(fecha2.getMes());
+		System.out.println(fecha3.getMes());
 		
 		fecha1.setAnio(2000);
 		fecha1.setMes(12);

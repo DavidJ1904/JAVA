@@ -12,6 +12,8 @@ public class TestItem {
 		objeto1.productosActuales=20;
 		
 		objeto1.imprimir();
+		
+		
 		objeto1.devolver(8);
 		objeto1.vender(2);
 		System.out.println("////////////////////");

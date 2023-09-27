@@ -24,22 +24,22 @@ public class AdminTelefono {
 	
 	public int buscarClaro(Telefono telf, Telefono telf2, Telefono telf3, Telefono telf4, Telefono telf5, Telefono telf6) {
 		int contarClaro=0;
-		if (telf.getOperadora()=="movi") {	
+		if (telf.getOperadora()=="Claro") {	
 			contarClaro++;
 		}
-		if (telf2.getOperadora()=="movi") {
+		if (telf2.getOperadora()=="Claro") {
 			contarClaro++;
 		}
-		if(telf3.getOperadora()=="movi") {
+		if(telf3.getOperadora()=="Claro") {
 			contarClaro++;
 		}
-		if(telf4.getOperadora()=="movi") {
+		if(telf4.getOperadora()=="Claro") {
 			contarClaro++;
 		}
-		if(telf5.getOperadora()=="movi") {
+		if(telf5.getOperadora()=="Claro") {
 			contarClaro++;
 		}
-		if(telf6.getOperadora()=="movi") {
+		if(telf6.getOperadora()=="Claro") {
 			contarClaro++;
 		}
 		return contarClaro;

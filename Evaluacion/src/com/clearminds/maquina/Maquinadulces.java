@@ -70,9 +70,13 @@ public class Maquinadulces {
 
 	public void mostrarConfiguracion() {
 		System.out.println("CELDA 1: " + celda1.getCodigo());
+		System.out.println("SALDO 1: "+celda1.getProducto().getPrecio());
 		System.out.println("CELDA 2: " + celda2.getCodigo());
+		System.out.println("SALDO 2: "+celda2.getProducto().getPrecio());
 		System.out.println("CELDA 3: " + celda3.getCodigo());
+		System.out.println("SALDO 3: "+celda3.getProducto().getPrecio());
 		System.out.println("CELDA 4: " + celda4.getCodigo());
+		System.out.println("SALDO 4: "+celda4.getProducto().getPrecio());
 	}
 
 	public Celda buscarCelda(String celda) {
@@ -166,26 +170,6 @@ public class Maquinadulces {
 		}
 
 	}
-
-	/*public Celda buscarCeldaProducto(String codigo) {
-		if (celda1.getProducto() != null && celda1 != null && celda1.getProducto().getCodigo() == codigo) {
-			return celda1;
-		}
-
-		if (celda2.getProducto() != null && celda2 != null && celda2.getProducto().getCodigo() == codigo) {
-			return celda2;
-		}
-
-		if (celda3.getProducto() != null && celda3 != null && celda3.getProducto().getCodigo() == codigo) {
-			return celda3;
-		}
-
-		if (celda4.getProducto() != null && celda4 != null && celda4.getProducto().getCodigo() == codigo) {
-			return celda4;
-		}
-
-		return null;
-	}*/
 	
 	public Celda buscarCeldaProducto(String codigoProducto) {
 		if(codigoProducto == null || codigoProducto.isEmpty()){

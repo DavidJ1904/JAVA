@@ -72,7 +72,7 @@ public class Maquinadulces {
 		System.out.println("CELDA 1: " + celda1.getCodigo());
 		System.out.println("SALDO 1: "+celda1.getProducto().getPrecio());
 		System.out.println("CELDA 2: " + celda2.getCodigo());
-		System.out.println("SALDO 2: "+celda2.getProducto().getPrecio());
+		System.out.println("SALDO 2 : "+celda2.getProducto().getPrecio());
 		System.out.println("CELDA 3: " + celda3.getCodigo());
 		System.out.println("SALDO 3: "+celda3.getProducto().getPrecio());
 		System.out.println("CELDA 4: " + celda4.getCodigo());

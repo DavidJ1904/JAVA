@@ -10,6 +10,7 @@ public class TestEstudiante {
 		System.out.println("Nombre: "+alumno1.getNombre());
 		System.out.println("Nota: "+alumno1.getNota());
 		alumno1.calificar(alumno1.getNota());
+		
 	}
 
 }

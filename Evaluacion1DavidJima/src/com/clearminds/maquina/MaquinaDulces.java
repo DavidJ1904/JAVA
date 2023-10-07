@@ -12,7 +12,6 @@ public class MaquinaDulces {
 	public MaquinaDulces() {
 		celdas = new ArrayList<Celda>();
 	}
-
 	public void agregarCelda(String codigo) {
 		Celda codigo1 = new Celda(codigo);
 		celdas.add(codigo1);

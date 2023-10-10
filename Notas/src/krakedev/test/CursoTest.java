@@ -1,3 +1,5 @@
+package krakedev.test;
+
 import krakedev.entidades.Curso;
 import krakedev.entidades.Estudiante;
 import krakedev.entidades.Materia;

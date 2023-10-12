@@ -6,7 +6,7 @@ import com.krakedev.evaluacion.Telefono;
 
 public class TestTelefono {
 	public static void main(String[] args) {
-		 ArrayList<Telefono> teléfonos = new ArrayList();
+		 ArrayList<Telefono> teléfonos = new ArrayList<Telefono>();
 
 	        // Teléfonos con estado "C" (correctos)
 	        teléfonos.add(new Telefono("1234567890", "Movil"));

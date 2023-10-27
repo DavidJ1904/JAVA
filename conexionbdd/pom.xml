@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.krakedev</groupId>
-	<artifactId>ejerciciomaven</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>conexionbdd</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>ejerciciomaven</name>
+	<name>conexionbdd</name>
 	<url>http://www.example.com</url>
 
 	<properties>
@@ -53,6 +53,13 @@
 			<artifactId>junit-jupiter-params</artifactId>
 			<version>${junit}</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.6.0</version>
 		</dependency>
 
 		<dependency>
@@ -108,7 +115,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.krakedev.ejerciciomaven.App</mainClass>
+									<mainClass>com.krakedev.conexionbdd.App</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>

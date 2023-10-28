@@ -2,7 +2,9 @@ package com.krakedev.persistencia.servicios;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -99,5 +101,44 @@ public class AdminProyecto {
 				throw new Exception("Error con la base de datos");
 			}
 		}
+		
+	}
+	
+	public static Proyecto buscarPorId(int idBusqueda) throws Exception {
+		Proyecto p = new Proyecto();
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			con = ConexionBDD.conectar();
+			ps = con.prepareStatement("select * from proyecto where id = ?");
+			ps.setInt(1, idBusqueda);
+
+			rs = ps.executeQuery();
+
+			if (rs.next()) {
+				String proyNombre = rs.getString("proyecto");
+				Date fecIni = rs.getDate("fecha_inicio");
+				Date fecEnt = rs.getDate("fecha_entrega");
+				p.setId(idBusqueda);
+				p.setProyecto(proyNombre);
+				p.setFechaInicio(fecIni);
+				p.setFechaEntrega(fecEnt);
+			} else {
+				p = null;
+			}
+		} catch (Exception e) {
+			LOGGER.error("Error al consultar por monto", e);
+			throw new Exception("Error al consultar por monto");
+		} finally {
+			// Cerrar la conexion
+			try {
+				con.close();
+			} catch (SQLException e) {
+				LOGGER.error("Error con la base de datos", e);
+				throw new Exception("Error con la base de datos");
+			}
+		}
+		return p;
 	}
 }

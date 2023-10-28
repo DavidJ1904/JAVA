@@ -2,7 +2,9 @@ package com.krakedev.persistencia.servicios;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -95,5 +97,44 @@ public class AdminUsuarios {
 				throw new Exception("Error con la base de datos");
 			}
 		}
+	}
+	
+	public static ArrayList<Usuarios> buscarPorNombre(String nombreBusqueda) throws Exception{
+		ArrayList<Usuarios> usuario = new ArrayList<Usuarios>();
+		Connection con = null;
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		
+		try {
+			con=ConexionBDD.conectar();
+			ps=con.prepareStatement("select * from usuarios where nombre like ?");
+			ps.setString(1, "%"+nombreBusqueda+"%");
+			
+			rs=ps.executeQuery();
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String nombre = rs.getString("nombre");
+				String apellido = rs.getString("apellido");
+				Usuarios u = new Usuarios();
+				u.setId(id);
+				u.setNombre(nombre);
+				u.setApellido(apellido);
+				usuario.add(u);
+			}
+		} catch (Exception e) {
+			LOGGER.error("Error al consultar por nombre", e);
+			throw new Exception("Error al consultar por nombre");
+		}finally {
+			//cierra la conexion
+			try {
+				con.close();
+			} catch (SQLException e) {
+				LOGGER.error("Error de con la base de datos",e);
+				throw new Exception ("Error de con la base de datos");
+			}
+		}
+		
+		return usuario;
 	}
 }
